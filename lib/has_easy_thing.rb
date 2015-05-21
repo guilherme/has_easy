@@ -1,4 +1,5 @@
 class HasEasyThing < ActiveRecord::Base
+  attr_protected
   belongs_to :model, :polymorphic => true
   attr_accessor :model_cache, :definition, :value_cache
   before_validation :get_definition
